@@ -14,6 +14,8 @@
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
    <!-- Link css menu-transaksi -->
    <link rel="stylesheet" href="/src/menu/styles/menu-laporan-transaksi.css">
+   <link rel="stylesheet" href="/src/shared/components/button-kembali-batal.css">
+
 </head>
 
 <body>
@@ -36,10 +38,12 @@
                <div class="button-container mb-4">
                   <div class="button-content">
                      <div class="button-icon">
-                        <img src="/src/assets/img/icon-transaksi-pemasukan.png" alt="Icon Transaksi" class="img-fluid" />
+                        <img src="/src/assets/img/icon-transaksi-pemasukan.png" alt="Icon Transaksi"
+                           class="img-fluid" />
                      </div>
                      <div class="button-text">
-                        <a id="transaksi-pemasukan" href="/src/transaksi/transaksi-pemasukan.html">TRANSAKSI PEMASUKAN</a>
+                        <a id="transaksi-pemasukan" href="/src/transaksi/transaksi-pemasukan.html">TRANSAKSI
+                           PEMASUKAN</a>
                      </div>
                   </div>
                </div>
@@ -50,7 +54,8 @@
                <div class="button-container">
                   <div class="button-content">
                      <div class="button-icon">
-                        <img src="/src/assets/img/icon-transaksi-pengeluaran.png" alt="Icon Transaksi" class="img-fluid" />
+                        <img src="/src/assets/img/icon-transaksi-pengeluaran.png" alt="Icon Transaksi"
+                           class="img-fluid" />
                      </div>
                      <div class="button-text">
                         <a href="/src/transaksi/transaksi-pengeluaran.html">TRANSAKSI PENGELUARAN</a>
@@ -60,9 +65,9 @@
             </div>
             <!-- End Button Transaksi Pengeluaran -->
             <!-- Button Transaksi -->
-            <div class="col-md-12 d-flex align-items-center justify-content-center my-5">
-               <div id="button-kembali" class="text-center mx-auto">
-                  <a href="/src/menu/index.html">Kembali</a>
+            <div class="text-center">
+               <div class="mt-5" id="button-wrapper">
+                  <button id="cancelButton">KEMBALI</button>
                </div>
             </div>
          </div>
@@ -72,6 +77,8 @@
 
    <!-- my custom js -->
    <script src="/src/menu/js/menu-laporan-transaksi.js"></script>
+   <script src="/src/shared/components/button-kembali-batal.js"></script>
+
 
    <!-- Bootstrap 5.3.3 cdn script js -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
