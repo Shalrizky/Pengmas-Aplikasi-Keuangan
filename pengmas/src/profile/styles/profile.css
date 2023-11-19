@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #0b806d;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Bagian Atas Halaman */
+header .background-top {
+  background-color: var(--primary-color);
+  border-radius: 0 0 50px 50px;
+  padding-top: 100px;
+}
+
+.row .logo {
+  text-align: center;
+  margin-top: -80px;
+}
+
+.label-header h1 {
+  color: var(--primary-color);
+  font-weight: bolder;
+}
+
+#btn-tambahstok button {
+  padding: 8px 10px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  /* Menghilangkan border */
+  border-radius: 20px;
+  background-color: var(--primary-color);
+}
+
+ #form-profile .form-control {
+  border-radius: 0;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  /* Warna dan ketebalan garis dapat disesuaikan */
+  outline: none;
+}
+
+#form-profile .form-control:focus {
+  border: none;
+  border-bottom: 2px solid #05a187; /* Atur border bawah sesuai warna yang Anda inginkan */
+  box-shadow: none; /* Atur shadow sesuai keinginan Anda */
+}
+
+#form-profile .button-tambah-modal a {
+  background-color: var(--primary-color);
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 40px;
+}
+
+main .button-tambah-modal a:hover {
+  background-color: #075a4c;
+
+}
+
+#modalTambahBahanStok #btn-tambah-stok {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 5px var(--primary-color);
+  border-bottom: 2px solid #05a187; /* Atur border bawah sesuai warna yang Anda inginkan */
+}
