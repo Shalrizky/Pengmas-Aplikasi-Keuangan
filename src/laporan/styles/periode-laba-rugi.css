@@ -1,0 +1,119 @@
+:root {
+   --primary-color: #0B806D;
+   --bs-table-striped-bg: blue;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+}
+
+header .background-top {
+   background-color: var(--primary-color);
+   border-radius: 0 0 20px 20px;
+}
+
+header .background-top h1 {
+   font-size: 28px;
+   color: #fff;
+   font-weight: bolder;
+}
+
+main h3 {
+   font-size: 17px;
+   color: var(--primary-color);
+   font-weight: 600;
+}
+
+#radio-btn-laba-rugi label {
+   color: var(--primary-color);
+   font-weight: bold;
+   font-size: 18px;
+}
+
+input[type="radio"] {
+   background-color: transparent;
+   outline: 2px solid var(--primary-color);
+}
+
+main form h3 {
+   color: var(--primary-color);
+}
+
+input[type="radio"]:checked {
+   background-color: var(--primary-color);
+   outline: 2px solid var(--primary-color);
+   box-shadow: none;
+}
+
+/* Search */
+.search-container {
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+.input-search {
+   width: 100%;
+   padding: 8px 10px 8px 40px ;
+   font-size: 15px;
+   border: 1px solid #222 ;
+   border-radius: 10px;
+   transition: .3s ease;
+}
+
+.input-search::placeholder {
+   color: #9e9ea7;
+}
+
+.form-control:focus, .form-control:hover {
+   border: 1.5px solid #0B806D;
+   box-shadow: 0 0 0 4px rgba(21, 244, 88, 0.1);
+}
+
+.icon {
+   position: absolute;
+   left: 1rem;
+   fill: #000000;
+   width: 1rem;
+   height: 1rem;
+}
+
+/* Table  */
+
+table thead {
+   --bs-table-bg: var(--primary-color);
+   --bs-table-color: #fff;
+   border: 1px solid black;
+}
+
+table thead tr th {
+   border: 1px solid black;
+}
+
+tbody tr {
+   border: 1px solid black;
+}
+
+.table-striped tbody {
+   --bs-table-striped-bg: #0785702d;
+}
+
+#btnTerapkan  {
+   padding: 4px 12px;
+   font-weight: bold;
+   color: white;
+   border: none;
+   /* Menghilangkan border */
+   border-radius: 20px;
+   background-color: var(--primary-color);
+ }
+
+ #btnDetail  {
+   padding: 4px 15px;
+   font-weight: bold;
+   color: white;
+   border: none;
+   /* Menghilangkan border */
+   border-radius: 20px;
+   background-color: var(--primary-color);
+ }
