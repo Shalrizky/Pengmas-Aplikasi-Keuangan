@@ -1,0 +1,81 @@
+:root {
+   --primary-color: #0B806D
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+}
+
+/* Bagian Atas Halaman */
+header .background-top {
+   background-color: var(--primary-color);
+   border-bottom-right-radius: 100%;
+   border-bottom-left-radius: 100%;
+   padding-top: 100px;
+}
+
+.logo-img {
+   width: 130px;
+}
+
+/* Bagian Utama Halaman Yang Menampilkan Pilihan button */
+main .button-container {
+   border-radius: 20px;
+   background: var(--primary-color);
+   box-shadow: 0 4px 5.20px rgba(0, 0, 0, 0.40);
+   padding: 5px 0 ;
+   margin: 0 0 0 30px;
+   transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+main .button-content {
+   display: flex;
+   align-items: center;
+}
+
+main .button-content .button-icon {
+   width: 80px;
+   height: 80px;
+   box-shadow: 0 4px 5.20px rgba(0, 0, 0, 0.40);
+   background: #fff;
+   border-radius: 20px;
+   border: 3px solid var(--primary-color) ;
+   margin-left: -30px; 
+}
+
+main .button-content .button-text {
+   cursor: pointer;
+   padding: 0 10px;
+}
+
+main .button-content .button-text a {
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+   word-wrap: break-word
+}
+
+main .button-container:hover {
+   background-color: #075a4c;
+   opacity: 0.9; 
+}
+
+main #cancelButton {
+   background-color: var(--primary-color);
+   padding: 8px 40px;
+   margin: 0 5px;
+   border-radius: 20px;
+   transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+   color: #fff;
+   text-decoration: none;
+   font-weight: bold;
+   border: none;
+}
+
+main #cancelButton:hover {
+   background-color: #075a4c;
+   opacity: 0.9; 
+}
+
+
+ 

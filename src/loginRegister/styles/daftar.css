@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #0B806D
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+}
+
+#utama {
+    background-color: #fff;
+    margin-top: 10%;
+    border-radius:  50px 50px 0px 0px;
+    height: 100vh;
+}
+
+#utama h1 {
+    font-weight: bolder;
+}
+
+.input input {
+    border: 2px solid var(--primary-color);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.input label i {
+    opacity: 50%;
+}
+
+.input input::placeholder {
+    color: var(--primary-color);
+}
+
+.inputicon {
+    position: relative;
+ }
+ 
+ .inputicon i {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    font-size: 18px;
+    transform: translateY(-50%);
+    cursor: pointer;
+ }
+ 
+
+#registerBtn  {
+    width: 280px;
+    height: 45px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: -10px;
+    border: 3px solid #075a4c;
+}
+
+#cancelButton {
+    padding: 8px 115px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px solid var(--primary-color);
+}
+
+#registerBtn:hover {
+    background-color: #075a4c;
+    opacity: 0.9;
+}
+#cancelButton:hover {
+    background-color: #bebebe;
+    opacity: 0.9;
+}
