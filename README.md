@@ -3,10 +3,9 @@
 # Panduan Instalasi
 Sebelum Anda memulai proses instalasi aplikasi Tangguh Berkibar, pastikan Anda telah melakukan beberapa persiapan yang penting:
 
-! Warning pada saat proses instalasi aplikasi diharapkan anda sudah mendownload firebase CLI <br>
-! Jika anda belum mendownload firebase CLI anda bisa mendownload dengan mengetikan comman ```npm install -g firebase-tools``` <br>
-! Harap diingat bahwa untuk menginstall firebase CLI maka anda harus menggunakan npm seperti yang tertera diatas, Jika belum memiliki NPM, Anda perlu mengunduh Node.js. Harap unduh terlebih dahulu melalui link berikut:
-
+#### ! Warning pada saat proses instalasi aplikasi diharapkan anda sudah mendownload firebase CLI <br>
+#### ! Jika anda belum mendownload firebase CLI anda bisa mendownload dengan mengetikan command ```npm install -g firebase-tools``` <br>
+#### ! Harap diingat bahwa untuk menginstall firebase CLI maka anda harus menggunakan npm seperti yang tertera diatas, Jika belum memiliki NPM, Anda perlu mengunduh Node.js. Harap unduh terlebih dahulu melalui link berikut:
 [Node.js Download](https://nodejs.org/en/download)
 
 ### 1.Firebase Setup:
@@ -96,7 +95,7 @@ Sebelum Anda memulai proses instalasi aplikasi Tangguh Berkibar, pastikan Anda t
 
 ### Proses instalasi selesai dan telah berhasil menginstal dan mendeploy aplikasi Tangguh Berkibar! Silakan kunjungi website untuk melihat hasilnya.
 
-#### Catatan
+### Catatan
  - Pastikan nama folder proyek sesuai dengan apa yang anda ingin deploy dan insialisasi.
  - Pastikan Autehtikasi sudah sesuai seperti pada panduan isntalasi dan pada bagian reset password pastikan sudah sesuai dengan nama website yang anda deploy.
  - Pastikan rules firebase pada Realtime dataabase sudah sesuai dan terpublish.
