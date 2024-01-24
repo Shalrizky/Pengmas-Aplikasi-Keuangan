@@ -1,15 +1,15 @@
 # Tangguh Berkibar - Aplikasi Keuangan
 
+## Perhatian 
+#### Terdapat 2 files yang tertera pada aplikasi yaitu:
+1.   ```apkTangguhBerkibarDev_Version_1.1.0```  Merupakan file development untuk keperluan pengembangan program.
+2.  ```apkTangguhBerkibar_Version_1.1.0``` Merupakan file Deploy atau file aplikasi yang sudah FIX dan dapat di hosting/diinstal.
+#### Catatan
+ - Jika anda ingin menginstall/mendeploy aplikasi pastikan anda menggunakan file yang ke dua yaitu ```apkTangguhBerkibar_Version_1.1.0```
+
 # Panduan Instalasi
 
-## Perhatian 
- - Terdapat 2 files yang tertera pada aplikasi yaitu:
-   	1.   ```apkTangguhBerkibarDev_Version_1.1.0```
-   	2.  ```apkTangguhBerkibar_Version_1.1.0``` 
- - Files pertama yaitu ```apkTangguhBerkibarDev_Version_1.1.0``` merupakan file development untuk keperluan pengembangan program.
- - sedangan untuk file kedua ```apkTangguhBerkibar_Version_1.1.0``` adalah file Deploy atau file aplikasi yang sudah FIX dan dapat di hosting/diinstal.
-
-Sebelum Anda memulai proses instalasi aplikasi Tangguh Berkibar, pastikan Anda telah melakukan beberapa persiapan yang penting:
+## Sebelum Anda memulai proses instalasi aplikasi Tangguh Berkibar, pastikan Anda telah melakukan beberapa persiapan yang penting:
 
 #### ! Warning pada saat proses instalasi aplikasi diharapkan anda sudah mendownload firebase CLI <br>
 #### ! Jika anda belum mendownload firebase CLI anda bisa mendownload dengan mengetikan command ```npm install -g firebase-tools``` <br>
