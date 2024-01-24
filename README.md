@@ -20,7 +20,7 @@
  - Buat akun Firebase.
  - Buat proyek dengan nama "Aplikasi Tangguh Berkibar".
  - Setel proyek sebagai proyek web dengan nama "Tangguh Berkibar" (Pada tahap ini jangan mencentang pilihan hosting).
- - Aktifkan Google provider di Authentication -> Sign-in method (pada bagian email isi dengan email saat ini/email user, dan ubah projek menjadi "Tangguh Berkibar").
+ - Aktifkan Google provider di Authentication -> Sign-in method (pada bagian email isi dengan email saat ini/email user, dan ubah nama proyek menjadi "Tangguh Berkibar").
  - Atur template password reset pada Authentication -> Templates -> Password Reset.
    ### pada bagian password reset isi seperti berikut:
    - Sender name: Tangguh Berkibar.
