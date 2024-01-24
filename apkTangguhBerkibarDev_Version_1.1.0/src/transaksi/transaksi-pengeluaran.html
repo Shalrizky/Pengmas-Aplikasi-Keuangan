@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Transaksi Pemasukan</title>
+   <link rel="icon" href="/src/assets/img/logo-circle.png">
+   <!-- Bootstrap 5.3.2 cdn link -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <!-- flat picker css -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_green.css">
+   <!-- Link Google font poppins -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+   <!-- Font Awsome CDN Link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- Link css menu-transaksi -->
+   <link rel="stylesheet" href="/src/transaksi/styles/transaksi-pengeluaran.css">
+</head>
+
+<body>
+   <!-- Container Utama -->
+   <div class="container-fluid">
+      <header class="container-md-12">
+         <div class="row">
+            <div class="background-top pt-5 pb-4 text-center">
+               <h1 class="pb-3">TRANSAKSI PENGELUARAN</h1>
+               <span class="separator-1 mb-3"></span>
+               <span class="separator-2"></span>
+            </div>
+         </div>
+      </header>
+      <main class="container-md-6 my-4 mx-md-3">
+         <form action="" id="formTransaksiPengeluaran" class="needs-validation" novalidate>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="formPengeluaran py-5 px-4 px-md-5">
+                     <div class="input mb-4">
+                        <label for="tanggalTransaksi" class="form-label">Tanggal Transaksi</label>
+                        <input type="text" class="form-control" id="tanggalTransaksi" placeholder="dd/mm/yyy" required />
+                        <div id="invalidFeedbackTanggalTransaksi" class="invalid-feedback ms-2"></div>
+                     </div>
+                     <div class="checkbox mb-2">
+                        <label for="Uraian" class="form-label">Uraian</label>
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="checkboxBahanBaku">
+                           <label class="form-check-label" for="checkboxBahanBaku">
+                              Bahan Baku/Stok
+                           </label>
+                        </div>
+                     </div>
+                     <div class="input mb-4">
+                        <input type="text" class="form-control" id="uraian" placeholder="Contoh: Kemasan/Bensin"
+                           aria-label="uraian" aria-describedby="basic-addon1" required />
+                        <div class="col-12 d-flex align-items-center">
+                           <select class="form-select" id="selectBahanStok">
+                           </select>
+                           <div class="ms-3">
+                              <button type="button" class="btn" data-bs-toggle="modal"
+                                 data-bs-target="#modalTambahBahanStok" id="tambahBahanStokBtn">
+                                 +Tambah
+                              </button>
+                           </div>
+                        </div>
+                        <div id="invalidFeedbackSelectUraian" class="invalid-feedback ms-2"></div>
+                     </div>
+                     <div class="input mb-4">
+                        <label for="nominalTransaksi" class="form-label">Nominal Transaksi</label>
+                        <input type="text" class="form-control" id="nominalTransaksi" placeholder="Rp." required />
+                        <div id="invalidFeedbackNominalTransaksi" class="invalid-feedback ms-2"></div>
+                     </div>
+                     <p for="jenisTransaksi" class="form-label">Jenis Transaksi</p>
+                     <div class="radio-button ps-2">
+                        <div class="form-check ">
+                           <input class="form-check-input" type="radio" name="radioBtnJenisTransaksi" id="hpp"
+                              value="HPP" checked />
+                           <label class="form-check-label mx-2 mt-1" id="labelRadioBtnHpp" for="hpp">HPP</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                           <input class="form-check-input" type="radio" name="radioBtnJenisTransaksi"
+                              id="biayaOperasional" value="Biaya Operasional" />
+                           <label class="form-check-label mx-2 mt-1" id="labelRadioBtnBiayaOperasional"
+                              for="biayaOperasional">
+                              Biaya Operasional
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12 text-center mt-4 mb-4  ">
+                  <button type="submit" class="mb-4" id="btnSimpanTransaksi"><i class="fa fa-save"></i> Simpan</button>
+                  <br class="d-block d-md-none">
+                  <a href="/src/menu/menu-transaksi.html" class="btnKembali mb-4 ms-md-2" id="btnKembali"><i
+                        class="fa fa-arrow-left"></i> Kembali</a>
+               </div>
+            </div>
+         </form>
+      </main>
+   </div>
+   <!-- End Container Utama -->
+
+   <!-- modal tambah stok-->
+   <div class="modal fade" id="modalTambahBahanStok" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" style="margin-top: 180px;">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Bahan Baku/Stok</h1>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="form-modal-tambah-stok">
+               <div class="modal-body">
+                  <div id="alertModalTambah" class="mb-3"></div>
+                  <div class="input">
+                     <div class="form-floating">
+                        <input type="text" class="form-control" placeholder="Bahan Baku/Stok" id="bahanStokName"
+                           aria-describedby="bahan-stok-name-Feedback" autocomplete="Bahan Baku/Stok" autofocus />
+                        <label for="bahanStokName">Bahan Baku/Stok</label>
+                        <div id="bahan-stok-name-Feedback" class="invalid-feedback ms-2"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer my-2 justify-content-center">
+                  <button type="submit" class="text-center" id="btnTambahStok">+Tambah</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!-- MODAL TAMBAH END -->
+
+
+
+   <!-- My JS -->
+   <script type="module" src="/src/transaksi/js/transaksi-pengeluaran.js"></script>
+
+   <!-- Bootstrap 5.3.3 cdn script js -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
+
+   <!-- flat picker cdn -->
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/id.js"></script>
+
+   <!-- Sweet Alert CDN Link -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

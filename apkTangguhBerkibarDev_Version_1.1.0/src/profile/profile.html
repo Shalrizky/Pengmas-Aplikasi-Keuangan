@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Pengguna</title>
+  <link rel="icon" href="/src/assets/img/logo-circle.png">
+  <!-- Bootstrap 5.3.2 cdn link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <!-- Link Google font poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awsome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Link css menu-transaksi -->
+  <link rel="stylesheet" href="/src/profile/styles/profile.css" />
+</head>
+
+<body>
+  <!-- Container Utama -->
+  <div class="container-fluid">
+    <header class="container-md-12">
+      <div class="row">
+        <div class="background-top"></div>
+      </div>
+      <div class="row">
+        <div class="logo mb-4">
+          <img class="text-center" src="/src/assets/img/logo-circle.png" alt="Logo Tangguh Berkibar"
+            style="width: 120px;" />
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="row">
+        <div class="col-12 mb-3 label-header">
+          <h2 class="text-center">PROFILE</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 px-lg-5">
+          <div class="card mb-4 px-1 py-3 mx-lg-5">
+            <div class="card-body">
+              <div class="profile-item">
+                <i class="fa fa-briefcase icon"></i>
+                <div class="profile-details">
+                  <h6 class="card-subtitle mb-1 text-muted">Nama Usaha</h6>
+                  <p id="namaUsaha" class="card-text"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="profile-item pt-2">
+                <i class="fa fa-user icon"></i>
+                <div class="profile-details">
+                  <h6 class="card-subtitle mb-1 text-muted">Username</h6>
+                  <p id="namaUser" class="card-text"></p>
+                </div>
+              </div>
+              <hr>
+              <div class="profile-item pt-2">
+                <i class="fa fa-envelope icon"></i>
+                <div class="profile-details">
+                  <h6 class="card-subtitle mb-1 text-muted">Email</h6>
+                  <p id="email" class="card-text"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <button type="button" class="button-simpan-profile mb-2" id="btnUbahProfileModal" data-bs-toggle="modal"
+            data-bs-target="#modalUbahProfile"><i class="fa fa-pencil"></i> Ubah Profile</button>
+          <br class="d-block d-md-none">
+          <button type="button" class="button-simpan-password mb-4 ms-md-2" id="btnUbahPasswordModal"
+            data-bs-toggle="modal" data-bs-target="#modalUbahPassword"><i class="fa fa-lock"></i> Ubah Password</button>
+        </div>
+      </div>
+      <div class="row mx-lg-5 px-lg-4 justify-content-center">
+        <div class="col-12 text-center mb-3">
+          <p class="mb-2" style="font-weight: bold; color: #0b806d; font-size: 18px;">------ Bahan Baku/Stok ------</p>
+        </div>
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <select class="form-select" id="selectBahanStok"
+            style="height: 50px; width:70%; border-radius: 15px; border: 1px solid black;">
+          </select>
+          <div class="ms-3">
+            <a href="/src/profile/bahanStok.html" id="bahanStokBtn" class="btn btn-primary">
+              +Tambah
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <div class="text-center">
+          <div class="my-5" id="button-wrapper">
+            <a href="/src/menu/menu_utama.html" id="cancelButton">KEMBALI</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="text-center text-muted py-4 bg-light">
+      <div class="container">
+        <p class="mb-0 px-2 text-center">&copy; 2024 <a
+            href="/src/menu/menu-developer.html" class="link-dev-pages">Web Design and Development </a> by Pengabdian
+          Masyarakat SIF UPJ.</p>
+      </div>
+    </footer>
+  </div>
+  <!-- End Container Utama -->
+
+  <!-- Modal Ubah Profile -->
+  <div class="modal fade" id="modalUbahProfile" tabindex="-1" aria-labelledby="ubahProfileModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="col-12 pb-4 pt-2 text-center">
+            <img width="100px" src="/src/assets/img/Logo.png" alt="Logo Tangguh Berkibar">
+          </div>
+          <form action="" id="updateProfile">
+            <div class="row justify-content-center">
+              <div class="col-md-12 col-lg-6">
+                <div class="col-12 label-header-modal text-right">
+                  <h3 class="text-center">Perbarui Profil</h3>
+                  <p class="text-center px-2">Catatan: Perubahan username akan berdampak pada proses login. Anda harus
+                    menggunakan username baru untuk login.</p>
+                </div>
+                <div id="alertModal" class="my-4"></div>
+                <div class="input">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Nama Usaha" id="modalNamaUsaha"
+                      aria-describedby="namaUsahaFeedback" autocomplete="modalNamaUsaha" />
+                    <label for="modalNamaUsaha">Nama Usaha</label>
+                    <div id="namaUsahaFeedback" class="invalid-feedback ms-2"></div>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Username" id="modalUsername"
+                      aria-describedby="usernameFeedback" autocomplete="Username" />
+                    <label for="modalUsername">Username</label>
+                    <div id="usernameFeedback" class="invalid-feedback ms-2"></div>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Email" id="modalEmail" aria-describedby="email"
+                      autocomplete="modalEmail" style="background-color: gainsboro;" readonly />
+                    <label for="modalEmail">Email</label>
+                    <div id="email" class="invalid-feedback ms-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 text-center pt-3">
+                <button type="submit" id="btnModalUpdateProfile" class="mb-2">
+                  <i class="fa fa-pencil"></i> Ubah
+                </button>
+                <button type="button" id="btnCloseUpdateProfile" class="mb-2" data-bs-dismiss="modal">
+                  <i class="fa fa-times"></i> Batal
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ubah Password -->
+  <div class="modal fade" id="modalUbahPassword" tabindex="-1" aria-labelledby="modalUbahPassword" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="col-12 pb-4 pt-4 text-center">
+            <img width="100px" src="/src/assets/img/Logo.png" alt="Logo Tangguh Berkibar">
+          </div>
+          <div class="col-12 label-header-modal">
+            <h3 class="text-center">Ubah Password</h3>
+          </div>
+          <form action="" id="updatePasswordForm">
+            <div class="row justify-content-center">
+              <div class="col-md-12 col-lg-6">
+                <div id="alertModalPwd" class="my-4"></div>
+                <div class="input">
+                  <div class="inputicon">
+                    <div id="capsLockWarning" class="mb-1 ms-2" style="font-size: 14px;"></div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control" placeholder="Password Saat Ini" id="pwdSaatIni"
+                        aria-describedby="feedbackPwdSaatIni" autocomplete="pwdSaatIni">
+                      <label for="pwdSaatIni">Password Saat Ini</label>
+                      <i class="fa fa-eye" id="eyeOpenIconPwdSaatIni"></i>
+                      <i class="fa fa-eye-slash" id="eyeClosedIconPwdSaatIni" style="display: none;"></i>
+                      <div id="feedbackPwdSaatIni" class="invalid-feedback ms-2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input">
+                  <div class="inputicon">
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control" placeholder="Password Baru" id="pwdBaru"
+                        aria-describedby="feedbackPwdBaru" autocomplete="pwdBaru">
+                      <label for="pwdBaru">Password Baru</label>
+                      <i class="fa fa-eye" id="eyeOpenIconPwdBaru"></i>
+                      <i class="fa fa-eye-slash" id="eyeClosedIconPwdBaru" style="display: none;"></i>
+                      <div id="feedbackPwdBaru" class="invalid-feedback ms-2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input">
+                  <div class="inputicon">
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control" placeholder="Konfirmasi Password"
+                        id="konfirmasiPwdBaru" aria-describedby="passwordFeedbackModal"
+                        autocomplete="konfirmasiPwdBaru">
+                      <label for="konfirmasiPwdBaru">Konfirmasi Password Baru</label>
+                      <i class="fa fa-eye" id="eyeOpenIconKonfirmasiPwd"></i>
+                      <i class="fa fa-eye-slash" id="eyeClosedIconModalKonfirmasiPwd" style="display: none;"></i>
+                      <div id="konfirmasiPwdBaruFeedback" class="invalid-feedback ms-2"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 text-center pt-3">
+                <button type="submit" id="btnModalUpdatePassword" class="mb-2">
+                  <i class="fa fa-pencil"></i> Ubah
+                </button>
+                <button type="button" id="btnCloseUpdatePassword" class="mb-2" data-bs-dismiss="modal">
+                  <i class="fa fa-times"></i> Batal
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- my custom js -->
+  <script type="module" src="/src/profile/js/profile.js"></script>
+
+  <!-- Bootstrap 5.3.3 cdn script js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+  <!-- Sweet Alert CDN Link -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
