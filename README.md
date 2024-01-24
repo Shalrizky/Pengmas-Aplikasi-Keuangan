@@ -93,7 +93,9 @@
    	![image](https://github.com/Shalrizky/Pengmas-Aplikasi-Keuangan/assets/144994306/0a9469ee-2b0c-4bdc-bd45-6bd6b826d7fb)
 
 ### 6.Deploy & Update Aplikasi
- - setelah semua dilakukan maka buka firebase, Salin konfigurasi Firebase (SDK setup) dari Firebase Console dan pastekan ke dalam file init.js pada direktori file yang telah 		dihosting.
+ - setelah semua dilakukan maka buka firebase, Salin konfigurasi Firebase (SDK setup) dari Firebase Console dan pastekan ke dalam file init.js pada direktori file yang telah  dihosting. (harap copy pada bagian yang di block oleh gambar) <br>
+ <img width="768" alt="image" src="https://github.com/Shalrizky/Pengmas-Aplikasi-Keuangan/assets/144994306/34b1f274-f586-4ebd-92c9-84ddc4fcb68e">
+
  - Setelah SDK firebase sudah di pastekan pada file init maka kembali ke command prompt dan ketikan command ```firebase deploy```.
 
 ### 7.Cek Website:
