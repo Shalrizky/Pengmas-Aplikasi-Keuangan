@@ -44,7 +44,7 @@
 ### 2.Database Setup:
  - Buka Realtime Database dan buat database baru.
  - Pilih server USA dan setel mode ke "Start in Lock Mode".
- - Impor file "tangguh-berkibar-rtdb.json" yang sudah tertera pada file ini ke dalam database.
+ - Impor file "tangguh-berkibar-rtdb.json" yang sudah tertera pada folder ke dalam database.
 
 ### 3.Firebase Rules:
  - Buka menu Realtime Database -> Rules dan terapkan aturan berikut:
