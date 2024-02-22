@@ -1,7 +1,7 @@
 # Tangguh Berkibar - Aplikasi Keuangan
+ Program ini di develop untuk keperluan pengabdian masyarakat 
 
 ## Perhatian 
-## Program ini di develop untuk keperluan pengabdian masyarakat 
 #### Terdapat 2 baranches yang tertera pada aplikasi yaitu:
 1.   ```dev-for-lokal```  Merupakan file development untuk keperluan pengembangan program.
 2.  ```main``` Merupakan file Deploy atau file aplikasi yang sudah FIX dan dapat di hosting/diinstal.
