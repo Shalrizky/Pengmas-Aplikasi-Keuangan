@@ -1,12 +1,15 @@
 # Tangguh Berkibar - Aplikasi Keuangan
+ Program ini di develop untuk keperluan pengabdian masyarakat 
 
 ## Perhatian 
-#### Ini merupakan file untuk lokal
-#### Terdapat 2 files yang tertera pada aplikasi yaitu:
-1.   ```apkTangguhBerkibarDev_Version_1.1.0```  Merupakan file development untuk keperluan pengembangan program.
-2.  ```apkTangguhBerkibar_Version_1.1.0``` Merupakan file Deploy atau file aplikasi yang sudah FIX dan dapat di hosting/diinstal.
+File ini adalah file development yang dapat berjalan pada lokal namun tidak bisa untuk publish
+#### Terdapat 2 baranches yang tertera pada aplikasi yaitu:
+1.   ```dev-for-lokal```  Merupakan file development untuk keperluan pengembangan program.
+2.  ```main``` Merupakan file Deploy atau file aplikasi yang sudah FIX dan dapat di hosting/diinstal.
 #### Catatan
- - Jika anda ingin menginstall/mendeploy aplikasi pastikan anda menggunakan file yang ke dua yaitu ```apkTangguhBerkibar_Version_1.1.0```
+ - Jika anda ingin menginstall/mendeploy aplikasi pastikan anda **menggunakan file yang berada pada baranches  ```main```**
+ - Silahkan download file pada main untuk mendapatkan file fix jika ingin mendeploy apk
+ - Jika igin merubah/mencoba pada versi lokal maka bisa download file yang tertera pada baranch  ```dev-for-lokal```
 
 # Panduan Instalasi
 
@@ -79,7 +82,7 @@
 ### 4.Hosting:
  - Buka menu Hosting dan ikuti langkah-langkah untuk menginisialisasi dan merilis proyek Anda.
  - Setelah mengikuti langkah hosting pada firebase maka masuk ke direktori file pada CMD (pastikan run as administrator) pada tahap ini arahkan ke folder 
-   "apkTangguhBerkibar_Version_1.1.0".
+   yang baru saja anda download untuk di hosting.
  - Kemudian login dengan mengetikan commad ``` firebase login ```
  - Ketika login sudah berhasil ketikan command ```firebase init``` untuk memulai insiasi aplikasi.
 
@@ -112,9 +115,3 @@
  - Pastikan rules firebase pada Realtime dataabase sudah sesuai dan terpublish.
  - Harap diingat bahwa sebelum deploy aplikasi maka init harus diganti menggunakan firebase SDK yang tertea pada projek yang baru saja anda bikin seperti pada panduan.
  - Jika ada eror harap diperhatikan dan membaca eror tersebut.
-
-
-
- 
-
- 
