@@ -1,0 +1,233 @@
+:root {
+  --primary-color: #0b806d;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header .background-top {
+  background-color: var(--primary-color);
+  border-radius: 0 0 50px 50px;
+  padding-top: 100px;
+}
+
+.row .logo {
+  text-align: center;
+  margin-top: -75px;
+}
+
+.label-header h2 {
+  color: var(--primary-color);
+  font-weight: bolder;
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  color: var(--primary-color);
+  width: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.profile-details {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+hr {
+  margin: 20px 0;
+  border: 1px solid var(--primary-color);
+}
+
+#btnUbahProfileModal {
+  padding: 10px 10px;
+  font-weight: bold;
+  color: var(--primary-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  background-color: #fdfdfd;
+}
+
+#btnUbahProfileModal:hover {
+  color: #fff;
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+#btnUbahPasswordModal {
+  padding: 10px 10px;
+  font-weight: bold;
+  color: var(--primary-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  background-color: #fdfdfd;
+}
+
+#btnUbahPasswordModal:hover {
+  color: #fff;
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+#bahanStokBtn {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 12px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  border-radius: 12px;
+  background-color: var(--primary-color);
+}
+
+.label-header-modal h3 {
+  color: var(--primary-color);
+  font-weight: bolder;
+}
+
+.input input {
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+}
+
+.input input::placeholder {
+  color: var(--primary-color);
+}
+
+.input label {
+  color: var(--primary-color);
+}
+
+#btnModalUpdateProfile {
+  background-color: var(--primary-color);
+  padding: 12px 100px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+}
+
+#btnModalUpdateProfile:hover {
+  background-color: #075a4c;
+}
+
+#btnCloseUpdateProfile {
+  background-color: rgb(207, 5, 45);
+  padding: 12px 100px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+}
+
+#btnCloseUpdateProfile:hover {
+  background-color: rgb(164, 1, 34);
+}
+
+.inputicon {
+  position: relative;
+}
+
+.inputicon i {
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  font-size: 18px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#btnModalUpdatePassword {
+  background-color: var(--primary-color);
+  padding: 12px 100px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+}
+
+#btnModalUpdatePassword:hover {
+  background-color: #075a4c;
+}
+
+#btnCloseUpdatePassword {
+  background-color: rgb(207, 5, 45);
+  padding: 12px 100px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+}
+
+#btnCloseUpdatePassword:hover {
+  background-color: rgb(164, 1, 34);
+}
+
+main #cancelButton {
+  background-color: var(--primary-color);
+  padding: 8px 40px;
+  margin: 0 5px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+}
+
+main #cancelButton:hover {
+  background-color: #075a4c;
+  opacity: 0.9;
+}
+
+footer {
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.link-dev-pages {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.link-dev-pages:hover {
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+
+  .button-simpan-profile,
+  .button-simpan-password {
+    width: 100%;
+  }
+}
