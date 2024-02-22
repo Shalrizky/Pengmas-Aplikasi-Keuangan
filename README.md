@@ -1,5 +1,12 @@
 # Tangguh Berkibar - Aplikasi Keuangan
- Program ini di develop untuk keperluan pengabdian masyarakat 
+Aplikasi ini merupakan sebuah solusi yang dirancang dengan sederhana namun efektif untuk membantu UMKM dalam mengelola keuangan mereka. Fokus utamanya adalah memberikan kemudahan bagi para pengguna dalam memantau dan menganalisis kinerja keuangan bisnis mereka setiap bulan.
+
+Salah satu keunggulan utama dari aplikasi ini adalah kemampuannya untuk menyajikan informasi yang relevan dengan mudah, khususnya melalui modul Laba Rugi dan Laba Bersih. Modul ini memberikan gambaran yang jelas tentang performa keuangan UMKM dalam suatu periode waktu tertentu, sehingga memungkinkan pemilik bisnis untuk mengambil keputusan yang tepat.
+
+Selain itu, aplikasi ini juga dilengkapi dengan fitur riwayat transaksi harian yang sederhana namun informatif. Fitur ini memungkinkan pengguna untuk mencatat dengan teratur semua arus kas yang masuk dan keluar setiap hari, sehingga memudahkan mereka dalam melacak dan mengelola keuangan bisnis mereka.
+
+Meskipun sederhana, aplikasi ini memiliki potensi besar untuk membantu UMKM dalam mengelola keuangan mereka dengan lebih efisien. Dengan menyediakan alat yang mudah digunakan dan informasi yang relevan, aplikasi ini dapat membantu UMKM untuk mengembangkan bisnis mereka dengan lebih baik.
+
 
 ## Perhatian 
 #### Terdapat 2 baranches yang tertera pada aplikasi yaitu:
@@ -10,14 +17,12 @@
  - Silahkan download file pada main untuk mendapatkan file fix jika ingin mendeploy apk
  - Jika igin merubah/mencoba pada versi lokal maka bisa download file yang tertera pada baranch  ```dev-for-lokal```
 
-# Panduan Instalasi
+## Panduan Instalasi
+**Sebelum Anda memulai proses instalasi aplikasi Tangguh Berkibar, pastikan Anda telah melakukan beberapa persiapan yang penting:** <br>
 
-## Sebelum Anda memulai proses instalasi aplikasi Tangguh Berkibar, pastikan Anda telah melakukan beberapa persiapan yang penting:
-
-#### ! Warning pada saat proses instalasi aplikasi diharapkan anda sudah mendownload firebase CLI <br>
-#### ! Jika anda belum mendownload firebase CLI anda bisa mendownload dengan mengetikan command ```npm install -g firebase-tools``` <br>
-#### ! Harap diingat bahwa untuk menginstall firebase CLI maka anda harus menggunakan npm seperti yang tertera diatas, Jika belum memiliki NPM, Anda perlu mengunduh Node.js. Harap unduh terlebih dahulu melalui link berikut:
-[Node.js Download](https://nodejs.org/en/download)
+  - **! Pada saat proses instalasi aplikasi diharapkan anda sudah mendownload firebase CLI <br>**
+  - **! Jika anda belum mendownload firebase CLI anda bisa mendownload dengan mengetikan command ```npm install -g firebase-tools``` <br>**
+  - **! Harap diingat bahwa untuk menginstall firebase CLI maka anda harus menggunakan npm seperti yang tertera diatas, Jika belum memiliki NPM, Anda perlu mengunduh 		Node.js. ```Harap unduh terlebih dahulu melalui link berikut:``` [Node.js Download](https://nodejs.org/en/download)**
 
 ### 1.Firebase Setup:
  - Buat akun Firebase.
