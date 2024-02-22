@@ -1,11 +1,12 @@
 # Tangguh Berkibar - Aplikasi Keuangan
 
 ## Perhatian 
-#### Terdapat 2 baranch yang tertera pada aplikasi yaitu:
+## Program ini di develop untuk keperluan pengabdian masyarakat 
+#### Terdapat 2 baranches yang tertera pada aplikasi yaitu:
 1.   ```dev-for-lokal```  Merupakan file development untuk keperluan pengembangan program.
 2.  ```main``` Merupakan file Deploy atau file aplikasi yang sudah FIX dan dapat di hosting/diinstal.
 #### Catatan
- - Jika anda ingin menginstall/mendeploy aplikasi pastikan anda **menggunakan file yang berada pada baranch  ```main```**
+ - Jika anda ingin menginstall/mendeploy aplikasi pastikan anda **menggunakan file yang berada pada baranches  ```main```**
  - Silahkan download file pada main untuk mendapatkan file fix jika ingin mendeploy apk
  - Jika igin merubah/mencoba pada versi lokal maka bisa download file yang tertera pada baranch  ```dev-for-lokal```
 
