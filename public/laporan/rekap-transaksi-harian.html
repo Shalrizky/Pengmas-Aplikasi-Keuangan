@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Rekap Transaksi Harian</title>
+   <link rel="icon" href="../img/logo-circle.png">
+   <!-- Bootstrap 5.3.2 cdn link -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <!-- flat picker css -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_green.css">
+   <!-- Link Google font poppins -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+   <!-- Font Awsome CDN link -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   <!-- Link css menu-transaksi -->
+   <link rel="stylesheet" href="/laporan/styles/rekap-transaksi-harian.css">
+</head>
+
+<body>
+   <div class="container-fluid">
+      <header class="container-sm-12">
+         <div class="row">
+            <div class="background-top pt-5 pb-4 text-center">
+               <h1 class="pb-3">REKAP TRANSAKSI HARIAN</h1>
+               <span class="separator-1 mb-3"></span>
+               <span class="separator-2"></span>
+            </div>
+         </div>
+      </header>
+      <main class="container-md-6 my-5 mx-md-3">
+         <div class="card">
+            <div class="card-body py-4 my-4">
+               <div class="row mb-4 ">
+                  <div class="col-12 d-flex justify-content-md-start justify-content-center align-items-center">
+                     <a href="../../menu/menu-transaksi.html" class="text-center" id="btnTambahTransaksi">
+                        <i class="fas fa-plus"></i> Tambah
+                     </a>
+                     <div class="ms-2">
+                        <button id="exportToExcelButton">
+                           <i class="fas fa-file-excel"></i> Export to Excel
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="row mb-3">
+                  <div class="col-6 text-start ">
+                     <label for="dateStart" class="mt-2">Select By Date</label>
+                  </div>
+                  <div class="col-6 text-end mt-1 ">
+                     <button class="btn btn-link text-end" id="refreshDate"><i class="fas fa-sync-alt"></i>
+                        Refresh</button>
+                  </div>
+                  <div class="col-12">
+                     <div class="d-flex justify-content-between align-items-center">
+                        <div class="input-group">
+                           <input type="text" class="form-control" id="dateStart" placeholder="dd/mm/yyy">
+                           <span class="d-flex align-items-center mx-2"><i class="fa fa-arrow-right"></i></span>
+                           <input type="text" class="form-control" id="dateEnd" placeholder="dd/mm/yyy">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row align-items-center">
+                  <div class="col-md-6 mb-3 text-end">
+                     <select class="form-select " id="jenisTransaksi">
+                        <option value="" selected>Select By Jenis Transaksi</option>
+                        <option value="Penjualan">Penjualan</option>
+                        <option value="Non Penjualan">Non Penjualan</option>
+                        <option value="HPP">HPP</option>
+                        <option value="Biaya Operasional">Biaya Operasional</option>
+                     </select>
+                  </div>
+                  <div class="col-md-6 mb-3 text-start">
+                     <div class="search-container">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                           <g>
+                              <path
+                                 d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                              </path>
+                           </g>
+                        </svg>
+                        <input placeholder="Search..." type="search" class="input-search form-control form-control-sm"
+                           id="search">
+                     </div>
+                  </div>
+               </div>
+               <div class="table-responsive-md mb-3">
+                  <table class="table table-bordered text-center table-striped" id="tabelDataTransaksi">
+                     <thead>
+                        <tr>
+                           <th>No</th>
+                           <th>Tanggal</th>
+                           <th>Uraian</th>
+                           <th>Jenis Transaksi</th>
+                           <th>Pemasukan</th>
+                           <th>Pengeluaran</th>
+                           <th>Saldo</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                     </tbody>
+                     <tfoot>
+                        <tr class="pos-saldo-row ">
+                           <th class="text-end" colspan="6">Total Saldo Saat Ini</th>
+                           <th id="posSaldoTotal"></th>
+                        </tr>
+                     </tfoot>
+                  </table>
+               </div>
+               <div class="row">
+                  <div
+                     class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mb-4">
+                     <div class="d-flex align-items-center">
+                        <p class="mb-0 me-2">Showing</p>
+                        <select class="form-select form-select-sm me-2" id="rowsPerPageDropdown">
+                           <option value="10" selected>10</option>
+                           <option value="30">30</option>
+                           <option value="50">50</option>
+                           <option value="80">80</option>
+                           <option value="100">100</option>
+                        </select>
+                        <p class="mb-0">Per Pages</p>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center justify-content-md-end justify-content-lg-end">
+                           <li class="page-item">
+                              <button class="page-link" id="firstPageButton" aria-label="First">
+                                 <span aria-hidden="true">&lt;&lt;</span>
+                              </button>
+                           </li>
+                           <li class="page-item">
+                              <button class="page-link" id="prevPageButton" aria-label="Previous">
+                                 <span aria-hidden="true">&lt;</span>
+                              </button>
+                           </li>
+                           <li class="page-item" id="transaksiPageNumberContainer"></li>
+                           <li class="page-item">
+                              <button class="page-link" id="nextPageButton" aria-label="Next">
+                                 <span aria-hidden="true">&gt;</span>
+                              </button>
+                           </li>
+                           <li class="page-item">
+                              <button class="page-link" id="lastPageButton" aria-label="Last">
+                                 <span aria-hidden="true">&gt;&gt;</span>
+                              </button>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="text-center">
+               <div class="my-5" id="button-wrapper">
+                  <a href="../../menu/menu-laporan.html" id="cancelButton">KEMBALI</a>
+               </div>
+            </div>
+         </div>
+
+      </main>
+   </div> 
+
+   <!-- My JS -->
+   <script type="module" src="../../laporan/js/rekap-transaksi-harian.js"></script>
+   <script type="module" src="../init.js"></script>
+
+   <!-- Bootstrap 5.3.3 cdn script js -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
+
+   <!-- flat picker cdn -->
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/id.js"></script>
+
+   <!-- excel js cdn -->
+   <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+
+   <!-- Sweet Alert CDN Link -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

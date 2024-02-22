@@ -1,0 +1,157 @@
+:root {
+   --primary-color: #0B806D
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+}
+
+header .background-top {
+   background-color: var(--primary-color);
+}
+
+header .background-top h1 {
+   font-size: 18pt;
+   color: #fff;
+   font-weight: bolder;
+}
+
+header .background-top .separator-1 {
+   display: block;
+   margin: 10px auto;
+   width: 80%;
+   height: 1px;
+   background-color: #fff;
+}
+
+header .background-top .separator-2 {
+   display: block;
+   margin: 10px auto;
+   width: 60%;
+   height: 1px;
+   background-color: #fff;
+}
+
+
+main .formPengeluaran {
+   border: 3px solid var(--primary-color);
+   border-radius: 20px;
+   font-weight: 600;
+   box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+main .formPengeluaran .form-label {
+   color: var(--primary-color);
+   font-size: 18px;
+}
+
+.input input {
+   height: 50px;
+   border: 2px solid var(--primary-color);
+   border-radius: 15px;
+}
+
+.checkbox #checkboxBahanBaku {
+   border: 2px solid var(--primary-color);
+}
+
+.checkbox #checkboxBahanBaku:checked {
+   background-color: var(--primary-color);
+}
+
+.input select {
+   height: 50px;
+   border: 2px solid var(--primary-color);
+   border-radius: 15px;
+   display: none;
+}
+
+.input #tambahBahanStokBtn {
+   background-color: var(--primary-color);
+   color: #fff;
+   height: 45px;
+   font-weight: bold;
+   display: none;
+}
+
+.main .radio-button #label-radio-btn-penjualan,
+.main .radio-button #label-radio-btn-non-penjualan {
+   color: #222;
+}
+
+input[type="radio"] {
+   background-color: transparent;
+   border: 2px solid var(--primary-color);
+   width: 20px;
+   height: 20px;
+}
+
+input[type="radio"]:checked {
+   background-color: var(--primary-color);
+   border: 1px solid var(--primary-color);
+   box-shadow: none;
+}
+
+input[type="radio"]:valid {
+   outline: 1px solid var(--primary-color);
+
+}
+
+input[type="radio"]:checked+label {
+   font-weight: 700;
+}
+
+#btnSimpanTransaksi {
+   padding: 15px 50px;
+   font-weight: bold;
+   color: #fdfdfd;
+   transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+   border: none;
+   border-radius: 12px;
+   background-color: var(--primary-color);
+}
+
+#btnSimpanTransaksi:hover {
+   background-color: #075a4c;
+}
+
+#btnKembali {
+   padding: 14px 50px;
+   text-decoration: none;
+   font-weight: bold;
+   color: var(--primary-color);
+   transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+   border: 2px solid var(--primary-color);
+   border-radius: 12px;
+   background-color: #fdfdfd;
+}
+
+#btnKembali:hover {
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.invalid-feedback {
+   font-weight: 500;
+}
+
+#btnTambahStok {
+   background-color: var(--primary-color);
+   border: none;
+   font-size: 14px;
+   text-decoration: none;
+   color: #fff;
+   font-weight: 600;
+   padding: 12px 120px;
+   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+   #btnSimpanTransaksi {
+      width: 95%;
+   }
+
+   #btnKembali {
+      padding: 12px 34%;
+   }
+
+}
