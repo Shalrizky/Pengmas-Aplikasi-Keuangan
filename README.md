@@ -81,7 +81,7 @@
 ### 4.Hosting:
  - Buka menu Hosting dan ikuti langkah-langkah untuk menginisialisasi dan merilis proyek Anda.
  - Setelah mengikuti langkah hosting pada firebase maka masuk ke direktori file pada CMD (pastikan run as administrator) pada tahap ini arahkan ke folder 
-   "apkTangguhBerkibar_Version_1.1.0".
+   yang baru saja anda download untuk di hosting.
  - Kemudian login dengan mengetikan commad ``` firebase login ```
  - Ketika login sudah berhasil ketikan command ```firebase init``` untuk memulai insiasi aplikasi.
 
