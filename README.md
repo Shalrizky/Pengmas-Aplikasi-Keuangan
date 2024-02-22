@@ -1,11 +1,13 @@
 # Tangguh Berkibar - Aplikasi Keuangan
 
 ## Perhatian 
-#### Terdapat 2 files yang tertera pada aplikasi yaitu:
-1.   ```apkTangguhBerkibarDev_Version_1.1.0```  Merupakan file development untuk keperluan pengembangan program.
-2.  ```apkTangguhBerkibar_Version_1.1.0``` Merupakan file Deploy atau file aplikasi yang sudah FIX dan dapat di hosting/diinstal.
+#### Terdapat 2 baranch yang tertera pada aplikasi yaitu:
+1.   ```dev-for-lokal```  Merupakan file development untuk keperluan pengembangan program.
+2.  ```main``` Merupakan file Deploy atau file aplikasi yang sudah FIX dan dapat di hosting/diinstal.
 #### Catatan
- - Jika anda ingin menginstall/mendeploy aplikasi pastikan anda menggunakan file yang ke dua yaitu ```apkTangguhBerkibar_Version_1.1.0```
+ - Jika anda ingin menginstall/mendeploy aplikasi pastikan anda **menggunakan file yang berada pada baranch  ```main```**
+ - Silahkan download file pada main untuk mendapatkan file fix jika ingin mendeploy apk
+ - Jika igin merubah/mencoba pada versi lokal maka bisa download file yang tertera pada baranch  ```dev-for-lokal```
 
 # Panduan Instalasi
 
